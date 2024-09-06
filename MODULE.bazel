@@ -36,10 +36,6 @@ bazel_dep(
     repo_name = "io_bazel_stardoc",
 )
 
-# Remove this once rules_android has rolled out official Bzlmod support
-remote_android_extensions = use_extension("@rules_android//bzlmod_extensions:android_extensions.bzl", "remote_android_tools_extensions")
-use_repo(remote_android_extensions, "android_gmaven_r8", "android_tools")
-
 maven = use_extension(":extensions.bzl", "maven")
 
 _MAVEN_VERSION = "3.9.8"
